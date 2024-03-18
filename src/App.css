@@ -1,0 +1,245 @@
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  position: relative;
+}
+
+
+.suggest-image {
+  border-radius: 14px;
+  width: 170px;
+  height: 85%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 25px;
+  position: relative;
+}
+
+.card-container {
+  display: flex;
+  overflow-x: scroll;
+  max-width: 100%;
+}
+
+.card-text {
+  color: #f5f3e5;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 2px 2px #f88369;
+  margin: 0 !important;
+}
+
+.link-card {
+  position: relative;
+  width: 100%;
+  display: block;
+  height: 100%;
+}
+
+.mood-container {
+  width: 100%;
+  height: 50px;
+  display: flex;
+}
+
+.mood-container > :first-child {
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.mood-container > :last-child {
+  border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.tab {
+  display: flex;
+  border: 2px solid #ffcf12;
+  width: fit-content;
+  align-self: center;
+  color: black;
+  border-radius: 20px;
+}
+
+.active {
+  background-color: #ffcf12;
+  color: white;
+}
+
+.back-bar-container {
+  display: flex;
+  gap: 32px;
+  font-size: 24px;
+  align-items: center;
+  background-color: white;
+  color: black;
+  padding-left: 24px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.back-bar-container p {
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+
+.tab p {
+  margin: 0;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 14px;
+  border-radius: 20px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.detail-container {
+  color: black;
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+  word-break: break-word;
+}
+
+.detail-container * {
+  padding: 0px;
+  margin: 0px;
+}
+
+ul {
+  margin-left: 36px !important;
+}
+
+
+
+.yellow-container {
+  display: flex;
+  justify-content: center;
+  background-color: #FFEDD2;
+  border-radius: 10px;
+  padding: 15px;
+  gap: 4px;
+  flex-direction: column;
+}
+
+.emotion-day-container {
+  display: flex;
+  justify-content: center;
+  background-color: #FFEDD2;
+  border-radius: 10px;
+  padding: 15px;
+  gap: 16px;
+  flex-direction: column;
+}
+
+.emotion-percentage-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.container {
+  min-width: 100dvw;
+  min-height: 100dvh;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  max-width: 100dvw;
+  background-color: white;
+  gap: 24px;
+  color: black;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.rc {
+  width: 90% !important;
+  height: 375px !important;
+}
+
+.rc_root {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border: none;
+}
+
+
+.rc_body-days-of-month .rc_body-cell.rc_selected .rc_body-cell_value {
+  background-color: #ffcf12;
+  width: 80% !important;
+  height: 80% !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+}
+
+.quill {
+  display: flex;
+  flex-direction: column-reverse;
+  flex: 1
+}
+
+.ql-container.ql-snow {
+  border: 0px !important;
+  flex: 1 1 0;
+  overflow: scroll;
+}
+
+.ql-toolbar.ql-snow .ql-formats {
+  margin-right: 0px !important;
+}
+
+.ql-toolbar.ql-snow {
+  display: flex;
+  justify-content: center;
+  background-color: #ffcf12 !important;
+  border: 3px solid #ffcf12 !important;
+  border-radius: 10px;
+}
+
+.ql-formats button:focus {
+  color: red !important;
+}
+
+.rc_body-weekdays {
+  margin: 0px !important;
+}
+
+input {
+  background-color: #f5f5f5;
+  color: #D9D9D9;
+  border-radius: 10px;
+  font-size: 14px;
+  padding: 10px;
+}
