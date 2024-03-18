@@ -183,7 +183,7 @@ export default function NoteScreen({ navigation, route }) {
 
       const newNote = {
         note: noteData.note,
-        imageSelected: uploadResult ? uploadResult.data.link : noteData.imageSelected,
+        imageSelected: uploadResult ? uploadResult.data.data.link : noteData.imageSelected,
         emotion: noteData.emotion,
         toDoList: noteData.toDoList,
         date: date
