@@ -44,7 +44,7 @@
   display: flex;
 }
 
-.mood-container > :first-child {
+/* .mood-container > :first-child {
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
 }
@@ -52,7 +52,7 @@
 .mood-container > :last-child {
   border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
-}
+} */
 
 .tab {
   display: flex;

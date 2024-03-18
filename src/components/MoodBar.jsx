@@ -5,6 +5,25 @@ export default function MoodBar({
   emotions
 }) {
 
+  const styles = {
+    firstBar: {
+      borderTopLeftRadius: 30,
+      borderBottomLeftRadius: 30
+    },
+    lastBar: {
+      borderTopRightRadius: 30,
+      borderBottomRightRadius: 30
+    },
+  }
+
+  const firstNonZeroMoodIndex = moodData.findIndex(item => item.percent != 0);
+
+  // Find the last item where percentage is not 0
+  const reversedMoodData = [...moodData].reverse(); // Create a reversed copy of the array
+  const lastNonZeroMoodIndex = moodData.length - reversedMoodData.findIndex(item => item.percent != 0) - 1;
+
+  console.log("firstNonZeroMoodIndex", firstNonZeroMoodIndex, "lastNonZeroMoodIndex", lastNonZeroMoodIndex)
+
   return (
     <>
       <div className="mood-container">
@@ -13,7 +32,9 @@ export default function MoodBar({
             <Fragment key={index}>
               <div style={{
                 width: `${mood.percent}%`,
-                backgroundColor: emotions?.[index].backgroundColor
+                backgroundColor: emotions?.[index].backgroundColor,
+                ...(firstNonZeroMoodIndex === index && styles.firstBar),
+                ...(lastNonZeroMoodIndex === index && styles.lastBar),
               }} />
             </Fragment>
           )
