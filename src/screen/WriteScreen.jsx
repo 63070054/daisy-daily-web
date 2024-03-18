@@ -7,7 +7,6 @@ export default function WriteScreen({ value, onValueChange, title, onBack }) {
 
   const modules = {
     toolbar: [
-      [{ 'header': 1 }, { 'header': 2 }],
       ["bold", "italic", "underline", "blockquote"],
       [
         { align: null },

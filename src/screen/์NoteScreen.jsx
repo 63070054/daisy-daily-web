@@ -185,7 +185,7 @@ export default function NoteScreen({ navigation, route }) {
         JSON.stringify(newNotes),
       );
 
-      toast.success(`${alreadyNote ? 'Note successfully update ' : 'Note successfully add'} on ${convertDate}`)
+      // toast.success(`${alreadyNote ? 'Note successfully update ' : 'Note successfully add'} on ${convertDate}`)
 
       await navigate("/")
 
