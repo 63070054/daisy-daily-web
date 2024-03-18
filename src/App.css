@@ -92,6 +92,8 @@
   padding-right: 30px;
   font-size: 14px;
   border-radius: 20px;
+  padding-top: 6px;
+  padding-bottom: 6px;
 }
 
 .bold {
@@ -152,7 +154,7 @@ ul {
 .container {
   min-width: 100dvw;
   min-height: 100dvh;
-  padding: 24px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   max-width: 100dvw;
@@ -223,13 +225,10 @@ ul {
 .ql-toolbar.ql-snow {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   background-color: #ffcf12 !important;
   border: 3px solid #ffcf12 !important;
   border-radius: 10px;
-}
-
-.ql-formats button:focus {
-  color: red !important;
 }
 
 .rc_body-weekdays {

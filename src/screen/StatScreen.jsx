@@ -64,11 +64,11 @@ export default function StatScreen() {
     return (
         <>
             <div className="yellow-container" style={{gap: 16}}>
-                <p style={{ textAlign: "center" }}>Your mood past 7 days</p>
+                <p style={{ textAlign: "center", fontWeight: "bold" }}>Your mood past 7 days</p>
                 <MoodBar moodData={moodData} emotions={emotions} />
             </div>
             <div className="yellow-container">
-                <p style={{ textAlign: "center" }}>Your mood past 7 days</p>
+                <p style={{ textAlign: "center", fontWeight: "bold" }}>Your mood past 7 days</p>
                 {pastDates.map((date, index) => {
                     var options = {
                         weekday: "long",
@@ -81,7 +81,7 @@ export default function StatScreen() {
                     );
                     return (
                         <div key={index} style={{display: "flex", gap: 8}}>
-                            <p style={{ width: "50%", fontSize: 14 }}>{convertDate}</p>
+                            <p style={{ width: "60%", fontSize: 14 }}>{convertDate}</p>
                             {emotions?.[emotions.length - getMood?.emotion]?.icon && (
                                 <>
                                     {cloneElement(

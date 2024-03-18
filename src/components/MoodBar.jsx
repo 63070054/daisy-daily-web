@@ -32,7 +32,7 @@ export default function MoodBar({
                     borderRadius: "100%",
                   }
                 })}
-                <span>{mood.percent.toFixed(2)}%</span>
+                <span>{mood.percent.toFixed(0)}%</span>
               </div>
             </Fragment>
           ))
