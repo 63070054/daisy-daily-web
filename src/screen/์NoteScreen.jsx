@@ -163,7 +163,7 @@ export default function NoteScreen({ navigation, route }) {
 
         const formData = new FormData();
         formData.append("image", base64ToFile(noteData.imageSelected))
-        uploadResult = await axios.post("https://api.imgur.com/3/image")
+        uploadResult = await axios.post("https://api.imgur.com/3/image", formData)
 
         // const params = {
         //   Bucket: "daisy-daily",
