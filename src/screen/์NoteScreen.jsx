@@ -2,6 +2,7 @@ import React, { cloneElement, useEffect, useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import { MdOutlineInsertPhoto } from "react-icons/md";
 import { toast } from "react-toastify";
+import axios from "axios";
 import "react-toastify/dist/ReactToastify.css";
 import { RiEmotionLaughLine, RiEmotionLine, RiEmotionNormalLine, RiEmotionSadLine, RiEmotionUnhappyLine } from 'react-icons/ri';
 
@@ -159,6 +160,10 @@ export default function NoteScreen({ navigation, route }) {
         //   secretAccessKey: "pvSOm2n8TyCVIW1R8Dh+9OnLlNP56R2nrH3ikq9z",
         //   region: "us-east-1",
         // });
+
+        const formData = new FormData();
+        formData.append("image", base64ToFile(noteData.imageSelected))
+        uploadResult = await axios.post("https://api.imgur.com/3/image")
 
         // const params = {
         //   Bucket: "daisy-daily",
