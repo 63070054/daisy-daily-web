@@ -34,7 +34,6 @@ export const emotions = [
 ];
 import { useLocation, useParams, useNavigate } from 'react-router-dom';
 import WriteScreen from "./WriteScreen";
-import  AWS  from 'aws-sdk';
 
 export default function NoteScreen({ navigation, route }) {
   const location = useLocation();
@@ -155,28 +154,31 @@ export default function NoteScreen({ navigation, route }) {
       let uploadResult = null
 
       if (!noteData.imageSelected?.startsWith("https") && noteData.imageSelected) {
-        const s3 = new AWS.S3({
-          accessKeyId: "AKIA5FTZB77QX5WWSSG5",
-          secretAccessKey: "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",
-          region: "us-east-1",
-        });
+        // const s3 = new AWS.S3({
+        //   accessKeyId: "AKIA5FTZB77QX5WWSSG5",
+        //   secretAccessKey: "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",
+        //   region: "us-east-1",
+        // });
 
-        const params = {
-          Bucket: "daisy-daily",
-          Key: `${Date.now()}.png`, // Example: Use timestamp as part of the key
-          Body: base64ToFile(noteData.imageSelected),
-          ContentType: "image/png",
-        };
+        // const params = {
+        //   Bucket: "daisy-daily",
+        //   Key: `${Date.now()}.png`, // Example: Use timestamp as part of the key
+        //   Body: base64ToFile(noteData.imageSelected),
+        //   ContentType: "image/png",
+        // };
 
-        // Upload the image to S3
-        uploadResult = await s3
-          .upload(params)
-          .promise();
+        // // Upload the image to S3
+        // uploadResult = await s3
+        //   .upload(params)
+        //   .promise();
+
       }
+
+      console.log("uploadResult", uploadResult)
 
       const newNote = {
         note: noteData.note,
-        imageSelected: uploadResult ? uploadResult.Location : noteData.imageSelected,
+        imageSelected: uploadResult ? uploadResult.data.link : noteData.imageSelected,
         emotion: noteData.emotion,
         toDoList: noteData.toDoList,
         date: date

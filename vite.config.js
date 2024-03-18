@@ -12,8 +12,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      // added for AWS-SDK with vite
-      "./runtimeConfig": "./runtimeConfig.browser"
+      "./runtimeConfig": "./runtimeConfig.browser",
     },
   },
 })

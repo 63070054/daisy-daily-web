@@ -39,7 +39,6 @@ function DetailScreen() {
         <h2
           style={{
             fontFamily: "ThaiText",
-            color: "white",
             fontWeight: "bold",
             color: "darkblue",
           }}
@@ -49,7 +48,6 @@ function DetailScreen() {
         <h3
           style={{
             fontFamily: "ThaiText",
-            color: "white",
             fontWeight: "bold",
             color: "darkblue",
           }}
