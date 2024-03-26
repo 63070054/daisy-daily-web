@@ -237,7 +237,7 @@ export default function NoteScreen({ navigation, route }) {
               </div>
               <div className="yellow-container">
                 <p >Today's note</p>
-                <input onFocus={navigateToWriteScreen} value={noteData.note.replace(/<[^>]+>/g, '')} />
+                <input onFocus={navigateToWriteScreen} style={{color: "black"}} value={noteData.note.replace(/<[^>]+>/g, '')} />
               </div>
               <div className="yellow-container">
                 <p style={{ fontSize: 16, marginTop: 5, marginBottom: 10, marginLeft: 10 }}>Today's photo</p>
@@ -267,7 +267,7 @@ export default function NoteScreen({ navigation, route }) {
                     noteData.toDoList.map((val, index) => (
                       <div key={index} style={{ flexDirection: "row", gap: 8, alignItems: "center", display: "flex" }}>
                         <p>{index + 1}.</p>
-                        <input style={{ width: "100%" }} onChange={(event) => {
+                        <input style={{ width: "100%", color: "black" }} onChange={(event) => {
                           const newText = event.target.value;
                           const copyToDoList = [...noteData.toDoList]
                           copyToDoList[index].value = newText
